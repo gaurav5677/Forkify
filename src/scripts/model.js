@@ -2,6 +2,7 @@ import { async } from "regenerator-runtime";
 import { API_URL, RES_PER_PAGE, KEY } from "./config.js";
 import { AJAX } from "./helpers.js";
 
+////////////////////////////// exporting the states from here 
 export const state = {
   recipe: {},
   search: {
@@ -28,6 +29,8 @@ const createRecipeObject = function (data) {
   };
 };
 
+
+//////////////////////////  Responsible for fetching  recipe data from the forkify api 
 export const loadRecipe = async function (id) {
   try {
     const data = await AJAX(`${API_URL}${id}?key=${KEY}`);
